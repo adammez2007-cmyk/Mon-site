@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #004d40;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-download:hover {
+            background-color: #00796b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0)">Menu</a>
+                <ul>
+                    <li><a href="mes-competences.html">Mes compétences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h1>Contactez-moi</h1>
+            <p>Vous pouvez me joindre via :</p>
+            <p>Email : <a href="mailto:adammez2007@gmail.com">adammez2007@gmail.com</a></p>
+            <p>Téléphone : 07 61 19 90 28</p>
+        </div>
+    </main>
+
+    <main>
+        <div class="content-box">
+            <h1>Mon CV</h1>
+            <div class="cv-container">
+                <!-- ✅ Image d’aperçu du CV -->
+                <img src="cv-image.jpg" alt="Mon CV">
+
+            </div>
+            <!-- ✅ Bouton de téléchargement -->
+            <a class="btn-download" href="cv-image.jpg" download>Télécharger mon CV</a>
+        </div>
+    </main>
+
+    <script>
+    document.querySelectorAll('.has-submenu > a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
+            submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+        });
+    });
+    </script>
+</body>
+</html>
+
+

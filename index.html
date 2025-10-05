@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles supplémentaires pour les nouvelles formes */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        /* Rectangle */
+        .skill-rect {
+            background: #a8e6a3;
+            color: #003300;
+            width: 220px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, background 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .skill-rect:hover {
+            transform: scale(1.05);
+            background: #87d687;
+        }
+
+        /* Losange */
+        .skill-diamond {
+            width: 150px;
+            height: 150px;
+            background: #a8e6a3;
+            transform: rotate(45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #003300;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .skill-diamond span {
+            transform: rotate(-45deg);
+            text-align: center;
+            width: 90%;
+        }
+
+        .skill-diamond:hover {
+            transform: rotate(45deg) scale(1.05);
+            background: #87d687;
+        }
+
+        /* Hexagone */
+        .skill-hex {
+            position: relative;
+            width: 120px;
+            height: 70px;
+            background-color: #a8e6a3;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #003300;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .skill-hex:before,
+        .skill-hex:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+        .skill-hex:before {
+            bottom: 100%;
+            border-bottom: 35px solid #a8e6a3;
+        }
+        .skill-hex:after {
+            top: 100%;
+            width: 0;
+            border-top: 35px solid #a8e6a3;
+        }
+        .skill-hex:hover {
+            transform: scale(1.05);
+            background: #87d687;
+        }
+        .skill-hex:hover:before {
+            border-bottom-color: #87d687;
+        }
+        .skill-hex:hover:after {
+            border-top-color: #87d687;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="has-submenu">
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="mes compétences.html">Mes compétences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h1>Bienvenue sur mon site !</h1>
+            <p>Bonjour, je m'appelle <strong>Adam Meziane</strong> et ceci est mon tout premier site web. J'ai appris à le créer grâce à Internet et à de nombreuses recherches personnelles. Ce projet m'a permis de me familiariser avec le HTML, le CSS et le JavaScript tout en expérimentant différentes mises en page et styles visuels.</p>
+
+            <p>Ce site présente plusieurs points importants :</p>
+            <ul>
+                <li><strong>Présentation personnelle :</strong> découvrez qui je suis et mon parcours dans le digital.</li>
+                <li><strong>Mes compétences :</strong> explorez mes connaissances en développement web et outils digitaux.</li>
+                <li><strong>Contact :</strong> n’hésitez pas à me laisser un message pour collaborer ou échanger.</li>
+            </ul>
+
+            <h2>Mon profil :</h2>
+            <div class="skills-container">
+                <div class="skill-rect">Scientifique</div>
+                <div class="skill-diamond"><span>Motivé</span></div>
+                <div class="skill-hex">Sociable</div>
+                <div class="skill-rect">Créatif</div>
+                <div class="skill-diamond"><span>intéresser</span></div>
+                <div class="skill-hex">Organisé</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    // Gestion du menu déroulant
+    document.querySelectorAll('.has-submenu > a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
+            submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+        });
+    });
+    </script>
+</body>
+</html>

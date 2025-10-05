@@ -1,0 +1,189 @@
+/* Importation de la font */
+@font-face {
+    font-family: 'Orbiga';
+    src: url('fonts/Orbiga.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'Orbiga', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #e0f7fa; /* bleu pâle de fond */
+}
+
+/* Menu vertical */
+nav {
+    width: 220px;
+    background-color: #b2dfdb; /* vert pâle */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #004d40;
+    text-decoration: none;
+    padding: 18px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #80cbc4;
+}
+
+/* Sous-menu initialement caché */
+nav ul li.has-submenu ul {
+    display: none;
+    flex-direction: column;
+}
+
+nav ul li.has-submenu ul li a {
+    padding-left: 30px;
+    background-color: #b2dfdb;
+}
+
+/* Contenu centré façon “hero” */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main .content-box {
+    background-color: #e0f2f1; /* rectangle doux */
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 700px;
+    width: 100%;
+    text-align: center; /* texte centré */
+}
+
+main .content-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #004d40;
+}
+
+main .content-box p, main .content-box ul li {
+    font-size: 1.2rem;
+    color: #00695c;
+    line-height: 1.6;
+}
+
+main .content-box ul {
+    list-style: none;
+    padding: 0;
+}
+.content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* ✅ Fond en diagonale */
+    background: linear-gradient(160deg, white 50%, #a8e6a3 50%);
+}
+body {
+    margin: 0;
+    font-family: 'Orbiga', sans-serif;
+    display: flex;
+    min-height: 100vh;
+
+    /* Fond en diagonale sur toute la page */
+    background: linear-gradient(160deg, white 50%, #a8e6a3 50%);
+}
+h1 {
+    font-family: 'Orbiga', sans-serif;
+    font-size: 3rem;
+    color: #004d40;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cv-container img {
+    width: 80%;              /* occupe 80% de la largeur */
+    max-width: 800px;        /* limite la taille max */
+    border-radius: 15px;     /* coins arrondis */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* ombre élégante */
+    transition: transform 0.3s ease;
+}
+
+.cv-container img:hover {
+    transform: scale(1.02);  /* petit zoom au survol */
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Passe à la ligne si écran trop petit */
+    margin-top: 40px;
+}
+
+.skill-bubble {
+    background: #a8e6a3; /* vert pâle */
+    color: #003300;
+    padding: 30px;
+    border-radius: 50%; /* forme ronde */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-bubble:hover {
+    transform: scale(1.1);
+    background: #87d687; /* vert un peu plus foncé au survol */
+}
+.skill-bubble {
+    background: #a8e6a3; 
+    color: #003300;
+    padding: 30px;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px; /* un peu plus petit pour tenir dans la bulle */
+    font-weight: 500;
+    line-height: 1.3; /* espace entre les lignes */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 20px;
+}
+
+.skill-bubble:hover {
+    transform: scale(1.1);
+    background: #87d687;
+}

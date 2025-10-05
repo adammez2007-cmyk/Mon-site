@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Compétences</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li class="has-submenu">
+        <a href="javascript:void(0)">Menu</a>
+        <ul>
+          <li><a href="mes compétences.html">Mes compétences</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content-box">
+      <h1>Mes Compétences</h1>
+      <p>Voici quelques domaines dans lesquels je me perfectionne :</p>
+
+      <div class="skills-container">
+  <div class="skill-bubble">
+    💻 Je débute dans la création de sites web,  
+    j’apprends à structurer des pages en HTML,  
+    les embellir avec du CSS et à ajouter des  
+    fonctionnalités en JavaScript.
+  </div>
+
+  <div class="skill-bubble">
+    📚 J’ai une grande culture générale,  
+    nourrie par ma curiosité et mon intérêt  
+    pour de nombreux domaines, ce qui me  
+    permet de m’adapter rapidement.
+  </div>
+
+  <div class="skill-bubble">
+    🌍 Je possède une maîtrise confirmée  
+    de l’anglais, aussi bien à l’écrit qu’à  
+    l’oral, ce qui me permet de communiquer  
+    efficacement à l’international.
+  </div>
+</div>
+
+  </main>
+
+  <script>
+    // Script pour ouvrir/fermer le menu déroulant
+    document.querySelectorAll('.has-submenu > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+        submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+      });
+    });
+  </script>
+</body>
+</html>
